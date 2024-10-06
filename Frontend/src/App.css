@@ -1,0 +1,221 @@
+/* Feed container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+/* Alert title for the latest posts */
+.alert-info {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+h3 {
+  margin: 0;
+}
+
+/* Post card container */
+.card_post {
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: white;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card_post:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile picture inside post card */
+.profile_pic {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 10px auto;
+  border: 2px solid #007bff;
+}
+
+/* Post card body content */
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 16px;
+  color: #555;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Like and comment icons */
+.both_icons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.like_comment_icon {
+  font-size: 30px;
+  /* margin-left: 60px; */
+  cursor: pointer;
+  color: black;
+  display: inline-block;
+}
+
+.like_btn {
+  color: blue;
+}
+
+.comment_icon {
+  font-size: 25px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+/* Follow button */
+.follow_btn {
+  display: block;
+  margin: 10px auto;
+  padding: 5px 15px;
+  border: 1px solid #007bff;
+  background-color: white;
+  color: #007bff;
+  font-size: 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.follow_btn:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Comment input field */
+.comment_input {
+  /* width: calc(100% - 30px); */
+  width: 85%;
+  margin: 10px 0;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 14px;
+  outline: none;
+}
+
+/* Send comment button */
+.comment_send_btn {
+  font-size: 25px;
+  color: blue;
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+/* Comments section styling */
+.comments-section {
+  padding: 10px;
+  border-top: 1px solid #eee;
+}
+
+.comment {
+  font-size: 14px;
+  color: #333;
+  /* margin-bottom: 5px; */
+}
+
+.allcomments {
+  color: #007bff;
+  font-size: 14px;
+  cursor: pointer;
+  /* display: block; */
+  /* margin-top: 5px; */
+}
+
+.allcomments:hover {
+  color: #0056b3;
+}
+
+/* Spinner centered when loading */
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.toast-login-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+
+/* Navbar styling */
+.navbar {
+  background-color: #343a40;
+  /* Dark background */
+}
+
+.navbar-brand {
+  font-size: 22px;
+  font-weight: bold;
+  color: #f8f9fa;
+  cursor: pointer;
+}
+
+.navbar-brand:hover {
+  color: #f8f9fa;
+}
+
+.nav-link {
+  color: #adb5bd;
+  /* Light grey color for nav links */
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #f8f9fa;
+  /* Change to white on hover */
+}
+
+.nav-link.active {
+  color: #f8f9fa;
+  /* Active link color white */
+}
+
+.navbar-toggler {
+  border-color: #f8f9fa;
+  /* Toggler border */
+}
+
+.navbar-toggler-icon {
+  color: #f8f9fa;
+}
+
+/* For mobile dropdown */
+.collapse {
+  background-color: #343a40;
+}
+
+/* Customize button in mobile view */
+.navbar-toggler {
+  outline: none;
+}
