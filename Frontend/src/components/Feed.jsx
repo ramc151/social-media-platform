@@ -12,7 +12,7 @@ import Spinner from './Spinner';
 import { toast } from 'react-toastify';
 import { Link } from 'react-router-dom';
 
-const Feed = () => {
+const Feed = (props) => {
     const dispatch = useDispatch();
     const posts = useSelector(state => state.posts.posts);
     const { user, token } = useSelector(state => state.auth);
@@ -24,9 +24,12 @@ const Feed = () => {
     useEffect(() => {
         setLoading(true);
         const fetchPosts = async () => {
+            props.setProgress(30);
             const response = await fetchPostHandler();
+            props.setProgress(70);
             dispatch(setPosts(response.data));
             setLoading(false);
+            props.setProgress(100);
         };
         fetchPosts();
     }, [dispatch, token]);
@@ -112,7 +115,7 @@ const Feed = () => {
             <div className="alert alert-info"><h3>Latest Posts</h3></div>
             <div className="row">
                 {loading && <Spinner />}
-                {posts && posts.map(post => (
+                {!loading && posts && posts.map(post => (
                     <div className="col-sm-3 my-2" key={post._id}>
                         <div className="card card_post">
                             <img src="./images/profile_pic.webp" className="card-img-top profile_pic" alt="Loading..." />
