@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 const Navbar = () => {
     const [token, setToken] = useState(localStorage.getItem('token'));
@@ -33,28 +33,28 @@ const Navbar = () => {
                         {token ? (
                             <>
                                 <li className="nav-item">
-                                    <Link className="nav-link active" aria-current="page" to="/">Feed</Link>
+                                    <NavLink className="nav-link" to="/">Feed</NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/createpost">Create Post</Link>
+                                    <NavLink className="nav-link" to="/createpost">Create Post</NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/logout">Logout</Link>
+                                    <NavLink className="nav-link" to="/logout">Logout</NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="register">Register</Link>
+                                    <NavLink className="nav-link" to="register">Register</NavLink>
                                 </li>
                             </>
                         ) : (
                             <>
                                 <li className="nav-item">
-                                    <Link className="nav-link active" aria-current="page" to="/">Feed</Link>
+                                    <NavLink className="nav-link" to="/">Feed</NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="login">Login</Link>
+                                    <NavLink className="nav-link" to="login">Login</NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="register">Register</Link>
+                                    <NavLink className="nav-link" to="register">Register</NavLink>
                                 </li>
                             </>
                         )}

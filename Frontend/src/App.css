@@ -219,3 +219,7 @@ h3 {
 .navbar-toggler {
   outline: none;
 }
+
+nav a.active {
+  font-weight: bold;
+}
